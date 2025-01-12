@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/MainActivity">
+
+    <activity
+        android:id="@+id/MainActivity"
+        android:name="se.gritacademy.integration.MainActivity"
+        android:label="Main Activity"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_mainActivity_to_levelActivity"
+            app:destination="@id/level" />
+    </activity>
+    <activity
+        android:id="@+id/level"
+        android:name="se.gritacademy.integration.YogaLevelActivity"
+        android:label="fragment_second"
+        tools:layout="@layout/activity_yoga_level" >
+        <action
+            android:id="@+id/action_LevelActivity_to_PoseList"
+            app:destination="@id/LevelPosesActivity" />
+        <argument
+            android:name="data2"
+            app:argType="string" />
+    </activity>
+    <activity
+        android:id="@+id/LevelPosesActivity"
+        android:name="se.gritacademy.integration.LevelPosesActivity"
+        android:label="poses_level_activity"
+        tools:layout="@layout/activity_yoga_level_poses" >
+        <action
+            android:id="@+id/action_PosesList_to_ChosenPose"
+            app:destination="@id/Pose" />
+        <argument
+            android:name="data3"
+            app:argType="string" />
+    </activity>
+    <activity
+        android:id="@+id/Pose"
+        android:name="se.gritacademy.integration.PoseActivity"
+        android:label="pose_activity"
+        tools:layout="@layout/activity_yoga_level_poses" >
+        <action
+            android:id="@+id/action_Pose_to_PoseList"
+            app:destination="@id/LevelPosesActivity" />
+        <argument
+            android:name="data4"
+            app:argType="string" />
+    </activity>
+</navigation>

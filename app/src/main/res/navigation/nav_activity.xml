@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/MainActivity">
+
+    <activity
+        android:id="@+id/MainActivity"
+        android:name="se.gritacademy.integration.MainActivity"
+        android:label="Main Activity"
+        tools:layout="@layout/activity_main" />
+
+    <activity
+        android:id="@+id/level"
+        android:name="se.gritacademy.integration.YogaLevelActivity"
+        android:label="Yoga Level"
+        tools:layout="@layout/activity_yoga_level" />
+
+    <activity
+        android:id="@+id/LevelPosesActivity"
+        android:name="se.gritacademy.integration.LevelPosesActivity"
+        android:label="Level Poses"
+        tools:layout="@layout/activity_yoga_level_poses" />
+
+    <activity
+        android:id="@+id/Pose"
+        android:name="se.gritacademy.integration.PoseActivity"
+        android:label="Pose"
+        tools:layout="@layout/activity_yoga_level_poses" />
+</navigation>

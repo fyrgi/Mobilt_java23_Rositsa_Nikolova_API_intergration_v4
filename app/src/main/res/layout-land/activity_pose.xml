@@ -1,0 +1,81 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image on the left -->
+    <ImageView
+        android:id="@+id/poseImage"
+        android:layout_width="229dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_image_not_supported_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- English Pose Name -->
+    <TextView
+        android:id="@+id/poseEnName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Pose Name"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/poseImage"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sanskrit Pose Name -->
+    <TextView
+        android:id="@+id/sanskritName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sanskrit Name"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/poseEnName"
+        app:layout_constraintStart_toEndOf="@id/poseImage"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Pose Description -->
+    <TextView
+        android:id="@+id/poseDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Pose Description"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/sanskritName"
+        app:layout_constraintStart_toEndOf="@id/poseImage"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Pose Benefits -->
+    <TextView
+        android:id="@+id/poseBenefits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Pose Benefits"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/poseDescription"
+        app:layout_constraintStart_toEndOf="@id/poseImage"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poseBenefits"
+        app:layout_constraintVertical_bias="0.986"
+        app:menu="@menu/bottom_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
